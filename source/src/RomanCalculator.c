@@ -4,15 +4,19 @@
 
 void romanAdd(char *pi_num1, char *pi_num2, char *po_results)
 {
+    printf("%d\n", __LINE__);
     //Convert pi_num1 to an integer
     int l_num1 = convertRomanToInt(pi_num1);
     
+    printf("%d\n", __LINE__);
     //Convert pi_num2 to an integer
     int l_num2 = convertRomanToInt(pi_num2);
     
+    printf("%d\n", __LINE__);
     //Add
     int l_results = l_num1 + l_num2;
 
+    printf("%d\n", __LINE__);
     //Convert Integer to Roman
     convertIntToRoman(l_results, po_results);
     
@@ -82,7 +86,7 @@ int convertRomanToInt(char *pi_num)
     }
 
     int l_sum = 0;
-    for (i = 0; i < l_length; i++)
+    for (i = 0; i < l_length - 1; i++)
     {
         //If a lesser numeral is put befoire a bigger it means subtraction of the lesser from the bigger
         if(l_array[i] < l_array[i+1]) 
@@ -91,9 +95,12 @@ int convertRomanToInt(char *pi_num)
             l_sum+=l_array[i];
     }
    
+     
+    l_sum += l_array[l_length - 1];
+    
     //free array
     free(l_array);
     l_array = NULL;
-
+    
     return l_sum;
 }

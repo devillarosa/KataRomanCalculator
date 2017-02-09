@@ -1,5 +1,6 @@
 #include <check.h>
 #include <stdio.h>
+#include "RomanCalculator.h"
 
 #define SIZE 256
 
@@ -9,11 +10,9 @@
 /// @return "II"
 START_TEST(test_addition_I_I)
 {
-    char l_input1[] = "I";
-    char l_input2[] = "I";
     char l_result[SIZE];
     
-    romanAdd(l_input1, l_input2, l_result);
+    romanAdd("I", "I", l_result);
     ck_assert_str_eq(l_result, "II");
 
 
@@ -26,11 +25,9 @@ END_TEST
 /// @return "IV"
 START_TEST(test_addition_II_II)
 {
-    char l_input1[] = "II";
-    char l_input2[] = "II";
     char l_result[SIZE];
     
-    romanAdd(l_input1, l_input2, l_result);
+    romanAdd("II", "II", l_result);
     ck_assert_str_eq(l_result, "IV");
 
 }
@@ -42,11 +39,9 @@ END_TEST
 /// @return "VI"
 START_TEST(test_addition_III_III)
 {
-    char l_input1[] = "III";
-    char l_input2[] = "III";
     char l_result[SIZE];
     
-    romanAdd(l_input1, l_input2, l_result);
+    romanAdd("III", "III", l_result);
     ck_assert_str_eq(l_result, "VI");
 
 }
@@ -58,11 +53,9 @@ END_TEST
 /// @return "VIII"
 START_TEST(test_addition_IV_IV)
 {
-    char l_input1[] = "IV";
-    char l_input2[] = "IV";
     char l_result[SIZE];
     
-    romanAdd(l_input1, l_input2, l_result);
+    romanAdd("IV", "IV", l_result);
     ck_assert_str_eq(l_result, "VIII");
 
 }
@@ -74,11 +67,9 @@ END_TEST
 /// @return "X"
 START_TEST(test_addition_V_V)
 {
-    char l_input1[] = "V";
-    char l_input2[] = "V";
     char l_result[SIZE];
 
-    romanAdd(l_input1, l_input2, l_result);
+    romanAdd("V", "V", l_result);
     ck_assert_str_eq(l_result, "X");
 }
 END_TEST
