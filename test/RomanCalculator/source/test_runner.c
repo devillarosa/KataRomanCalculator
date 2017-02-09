@@ -27,11 +27,13 @@ int main()
      
      
      // Subtraction
-     tc_subtraction = tcase_create("Subtraction"); // Create Addition Test Case
-     suite_add_tcase(s, tc_subtraction); // Add Test Cases to Addition Test Case
+     tc_subtraction = tcase_create("Subtraction"); // Create Subtraction Test Case
+     suite_add_tcase(s, tc_subtraction); // Add Test Cases to Subtraction Test Case
      tcase_add_test(tc_subtraction, test_subtraction_X_I);
      tcase_add_test(tc_subtraction, test_subtraction_L_II); 
      tcase_add_test(tc_subtraction, test_subtraction_M_I);
+     tcase_add_test(tc_subtraction, test_subtraction_M_L);
+     tcase_add_test(tc_subtraction, test_subtraction_MM_MCXI);
      
      
      
