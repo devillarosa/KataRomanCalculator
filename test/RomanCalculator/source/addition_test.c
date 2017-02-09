@@ -1,6 +1,8 @@
 #include <check.h>
 #include <stdio.h>
 
+#define SIZE 256
+
 /// @brief Test I + I
 /// @param1 "I"
 /// @param2 "I"
@@ -9,7 +11,9 @@ START_TEST(test_addition_I_I)
 {
     char l_input1[] = "I";
     char l_input2[] = "I";
-    char *l_result = romanAdd(l_input1, l_input2);
+    char l_result[SIZE];
+    
+    romanAdd(l_input1, l_input2, l_result);
     ck_assert_str_eq(l_result, "II");
 
 
@@ -24,7 +28,9 @@ START_TEST(test_addition_II_II)
 {
     char l_input1[] = "II";
     char l_input2[] = "II";
-    char *l_result = romanAdd(l_input1, l_input2);
+    char l_result[SIZE];
+    
+    romanAdd(l_input1, l_input2, l_result);
     ck_assert_str_eq(l_result, "IV");
 
 }
@@ -38,7 +44,9 @@ START_TEST(test_addition_III_III)
 {
     char l_input1[] = "III";
     char l_input2[] = "III";
-    char *l_result = romanAdd(l_input1, l_input2);
+    char l_result[SIZE];
+    
+    romanAdd(l_input1, l_input2, l_result);
     ck_assert_str_eq(l_result, "VI");
 
 }
@@ -52,7 +60,9 @@ START_TEST(test_addition_IV_IV)
 {
     char l_input1[] = "IV";
     char l_input2[] = "IV";
-    char *l_result = romanAdd(l_input1, l_input2);
+    char l_result[SIZE];
+    
+    romanAdd(l_input1, l_input2, l_result);
     ck_assert_str_eq(l_result, "VIII");
 
 }
@@ -66,7 +76,9 @@ START_TEST(test_addition_V_V)
 {
     char l_input1[] = "V";
     char l_input2[] = "V";
-    char *l_result = romanAdd(l_input1, l_input2);
+    char l_result[SIZE];
+
+    romanAdd(l_input1, l_input2, l_result);
     ck_assert_str_eq(l_result, "X");
 }
 END_TEST
