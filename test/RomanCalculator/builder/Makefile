@@ -3,8 +3,8 @@ CPPFLAGS :=
 CXXFLAGS := -Wall -g -Wextra
 
 TOP_DIR := ../../..
-HEADER_DIR := $(TOP_DIR)/source/header 
-SOURCE_DIR := $(TOP_DIR)/source/src
+HEADER_DIR := $(TOP_DIR)/source/RomanCalculator/header 
+SOURCE_DIR := $(TOP_DIR)/source/RomanCalculator/src
 TEST_SOURCE_DIR := ../source
 COTS_DIR := ../../../cots
 BIN_DIR := ../bin
