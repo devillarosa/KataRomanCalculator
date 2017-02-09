@@ -20,6 +20,17 @@ void romanAdd(char *pi_num1, char *pi_num2, char *po_results)
 
 void romanSubtract(char *pi_num1, char *pi_num2, char *po_results)
 {
+    //Convert pi_num1 to an integer
+    int l_num1 = convertRomanToInt(pi_num1);
+    
+    //Convert pi_num2 to an integer
+    int l_num2 = convertRomanToInt(pi_num2);
+    
+    //Add
+    int l_results = l_num1 - l_num2;
+
+    //Convert Integer to Roman
+    convertIntToRoman(l_results, po_results);
     
 }
 
