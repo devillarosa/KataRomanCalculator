@@ -46,3 +46,31 @@ START_TEST(test_subtraction_M_I)
 
 }
 END_TEST
+
+/// @brief Test M - L
+/// @param1 "M"
+/// @param2 "L"
+/// @return "CML"
+START_TEST(test_subtraction_M_L)
+{
+    char l_result[SIZE];
+    
+    romanSubtract("M", "L", l_result);
+    ck_assert_str_eq(l_result, "CML");
+
+}
+END_TEST
+
+/// @brief Test MM - MCXI
+/// @param1 "MM"
+/// @param2 "MCXI"
+/// @return "DCCCLXXXIX"
+START_TEST(test_subtraction_MM_MCXI)
+{
+    char l_result[SIZE];
+    
+    romanSubtract("MM", "MCXI", l_result);
+    ck_assert_str_eq(l_result, "DCCCLXXXIX");
+
+}
+END_TEST
