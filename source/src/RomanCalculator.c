@@ -4,19 +4,15 @@
 
 void romanAdd(char *pi_num1, char *pi_num2, char *po_results)
 {
-    printf("%d\n", __LINE__);
     //Convert pi_num1 to an integer
     int l_num1 = convertRomanToInt(pi_num1);
     
-    printf("%d\n", __LINE__);
     //Convert pi_num2 to an integer
     int l_num2 = convertRomanToInt(pi_num2);
     
-    printf("%d\n", __LINE__);
     //Add
     int l_results = l_num1 + l_num2;
 
-    printf("%d\n", __LINE__);
     //Convert Integer to Roman
     convertIntToRoman(l_results, po_results);
     
@@ -28,7 +24,7 @@ void convertIntToRoman(int pi_num, char *po_results)
     char *huns[] = {"", "C", "CC", "CCC", "CD", "D", "DC", "DDC", "DCCC", "CM"};
     char *tens[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
     char *ones[] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
-    int size[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int size[] =   {0 ,  1 ,  2  ,   3  ,  2  ,  1 ,   2 ,   3   ,   4  ,   2 };
 
     while (pi_num >= 1000)
     {
@@ -36,16 +32,11 @@ void convertIntToRoman(int pi_num, char *po_results)
         pi_num -= 1000;
     }
         
-    strcpy (po_results, huns[pi_num/100]);
-    po_results += size[pi_num/100];
-    pi_num = pi_num % 100;
+    strcpy (po_results, huns[pi_num/100]); po_results += size[pi_num/100];  pi_num = pi_num % 100;
+    strcpy (po_results, tens[pi_num/10]);  po_results += size[pi_num/10];   pi_num = pi_num % 10;
+    strcpy (po_results, ones[pi_num]);     po_results += size[pi_num];
     
-    strcpy (po_results, tens[pi_num/10]);
-    po_results += size[pi_num/10];
-    pi_num = pi_num % 10;
     
-    strcpy (po_results, ones[pi_num]);
-    po_results += size[pi_num];
     *po_results = '\0';
 
 }
