@@ -1,4 +1,4 @@
-#include "check.h"
+#include <check.h>
 #include "addition_test.c"
 
 Suite *s;

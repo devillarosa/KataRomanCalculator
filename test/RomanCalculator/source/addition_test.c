@@ -1,4 +1,4 @@
-#include "check.h"
+#include <check.h>
 #include <stdio.h>
 
 /// @brief Test I + I
@@ -9,9 +9,8 @@ START_TEST(test_addition_I_I)
 {
     char l_input1[] = "I";
     char l_input2[] = "I";
-//  char *l_result = addRoman(l_input1, l_input2);
-    char *l_result;
-//    ck_assert_str_eq(l_results, "II");
+    char *l_result = romanAdd(l_input1, l_input2);
+    ck_assert_str_eq(l_result, "II");
 
 
 }
@@ -25,9 +24,8 @@ START_TEST(test_addition_II_II)
 {
     char l_input1[] = "II";
     char l_input2[] = "II";
-//    char *results = addRoman(l_input1, l_input2);
-    char *l_result;
-//    ck_assert_str_eq(l_results, "IV");
+    char *l_result = romanAdd(l_input1, l_input2);
+    ck_assert_str_eq(l_result, "IV");
 
 }
 END_TEST
@@ -40,9 +38,8 @@ START_TEST(test_addition_III_III)
 {
     char l_input1[] = "III";
     char l_input2[] = "III";
-//    char *results = addRoman(l_input1, l_input2);
-    char *l_result;
-//    ck_assert_str_eq(l_results, "VI");
+    char *l_result = romanAdd(l_input1, l_input2);
+    ck_assert_str_eq(l_result, "VI");
 
 }
 END_TEST
@@ -55,9 +52,8 @@ START_TEST(test_addition_IV_IV)
 {
     char l_input1[] = "IV";
     char l_input2[] = "IV";
-//    char *results = addRoman(l_input1, l_input2);
-    char *l_result;
-//    ck_assert_str_eq(l_results, "VIII");
+    char *l_result = romanAdd(l_input1, l_input2);
+    ck_assert_str_eq(l_result, "VIII");
 
 }
 END_TEST
@@ -70,8 +66,7 @@ START_TEST(test_addition_V_V)
 {
     char l_input1[] = "V";
     char l_input2[] = "V";
-//    char *results = addRoman(l_input1, l_input2);
-    char *l_result;
-//    ck_assert_str_eq(l_results, "X");
+    char *l_result = romanAdd(l_input1, l_input2);
+    ck_assert_str_eq(l_result, "X");
 }
 END_TEST
