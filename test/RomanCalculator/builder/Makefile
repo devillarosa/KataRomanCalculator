@@ -17,7 +17,8 @@ SOURCE_FILES := $(SOURCE_DIR)/RomanCalculator.c
 
 
 TEST_FILES := $(SOURCE_DIR)/test_runner.c \
-	$(SOURCE_DIR)/addition_test.c
+	$(SOURCE_DIR)/addition_test.c \
+	$(SOURCE_DIR)/subtraction_test.c 
 
 SOURCE_OBJ_DIR := $(TOP_DIR)/bin/obj
 SOURCE_OBJ_FILES := $(addprefix $(SOURCE_OBJ_DIR)/,$(notdir $(SOURCE_FILES:.c=.o)))

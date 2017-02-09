@@ -18,6 +18,12 @@ void romanAdd(char *pi_num1, char *pi_num2, char *po_results)
     
 }
 
+void romanSubtract(char *pi_num1, char *pi_num2, char *po_results)
+{
+    
+}
+
+
 //Credit to: http://stackoverflow.com/questions/4986521/how-to-convert-integer-value-to-roman-numeral-string
 void convertIntToRoman(int pi_num, char *po_results)
 {
