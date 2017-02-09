@@ -19,6 +19,8 @@ int main()
      tcase_add_test(tc, test_addition_III_III);
      tcase_add_test(tc, test_addition_IV_IV);
      tcase_add_test(tc, test_addition_V_V); 
+     tcase_add_test(tc, test_addition_XIV_LX);
+     tcase_add_test(tc, test_addition_D_D); 
     
      
      

@@ -73,3 +73,29 @@ START_TEST(test_addition_V_V)
     ck_assert_str_eq(l_result, "X");
 }
 END_TEST
+
+/// @brief Test XIV + LX
+/// @param1 "XIV"
+/// @param2 "LX"
+/// @return "LXXIV"
+START_TEST(test_addition_XIV_LX)
+{
+    char l_result[SIZE];
+
+    romanAdd("XIV", "LX", l_result);
+    ck_assert_str_eq(l_result, "LXXIV");
+}
+END_TEST
+
+/// @brief Test D + D
+/// @param1 "D"
+/// @param2 "D"
+/// @return "M"
+START_TEST(test_addition_D_D)
+{
+    char l_result[SIZE];
+
+    romanAdd("D", "D", l_result);
+    ck_assert_str_eq(l_result, "M");
+}
+END_TEST
