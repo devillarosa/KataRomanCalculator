@@ -49,7 +49,7 @@ $(TEST_OBJ_DIR)/%.o: $(TEST_SOURCE_DIR)/%.c
 		$(CC) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE)-c $< -o $@
 
 clean:
-	rm -rf $(TARGET) $(TEST_OBJ_DIR) $(TEST_OBJ_DIR)
+	rm -rf $(TARGET) $(TEST_OBJ_DIR) $(SOURCE_OBJ_DIR)
 
 .PHONY: all
 $(shell mkdir -p $(SOURCE_OBJ_DIR))
